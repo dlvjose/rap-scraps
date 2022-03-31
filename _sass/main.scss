@@ -11,9 +11,14 @@ body{
     line-height: 1.5;
 }
 
-header, footer{
+header{
     background-color: $dark;
     color: $dark;
+}
+
+footer{
+    color: $white;
+    background-color: $red;
 }
 
 main{
@@ -42,4 +47,10 @@ h2{
     max-width: 1248px;
     margin: 0 auto;
     padding: 1rem;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
