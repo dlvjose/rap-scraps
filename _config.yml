@@ -3,3 +3,14 @@ exclude: ['README.md']
 collections:
   posts:
     output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
