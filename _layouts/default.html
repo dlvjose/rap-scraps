@@ -9,8 +9,35 @@
 
 <body>
     {% include navigation.html %}
-    {{ content }}
+    <div class="container">
+        {{ content }}
+    </div>
     {% include footer.html %}
 </body>
+
+<script src="assets/js/siema.min.js"></script>
+<script>
+    const mySiema = new Siema({
+        selector: '.carousel',
+        duration: 350
+    });
+
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+
+    prev.addEventListener("click", () => mySiema.prev());
+    next.addEventListener("click", () => mySiema.next());
+
+    // setInterval(() => mySiema.next(), 6000);
+
+    document.addEventListener('keydown', e => {
+        if (e.keyCode === 37) {
+            mySiema.prev();
+        }
+        else if (e.keyCode === 39) {
+            mySiema.next();
+        }
+    });
+</script>
 
 </html>

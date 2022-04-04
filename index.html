@@ -3,11 +3,23 @@ layout: default
 title: Home
 ---
 
-<ul>
-    {% for post in site.posts %}
-    <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.excerpt }}
-    </li>
-    {% endfor %}
-</ul>
+<main>
+    <div class="carousel">
+        {% for post in site.posts %}
+        <div>
+            <div class="flex-row">
+                <span class="metadata">{{ post.date | date: "%B %-d, %Y"}}</span>
+                <div class="controls">
+                    <span class="prev metadata">{</span>
+                    <span class="next metadata">}</span>
+                </div>
+            </div>
+            <span class="post">{{ post.content }}</span>
+            <div class="flex-row">
+                <span class="metadata">{{ post.song }}</span>
+                <a href="{{ post.link }}">Listen</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>

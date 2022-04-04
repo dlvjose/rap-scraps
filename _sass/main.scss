@@ -4,6 +4,8 @@ $dark: #232323;
 $white: #ffffff;
 
 body{
+    width: 100vw;
+    height: 100vh;
     background-color: $white;
     color: $dark;
     font-family: 'Montserrat', sans-serif;
@@ -17,30 +19,48 @@ header{
 }
 
 footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     color: $white;
     background-color: $red;
 }
 
-main{
-    background-color: $dark;
-    border-radius: 0 0 1.5rem 1.5rem;
+nav a{
+    margin-left: 1rem;
+    color: $gray;
+    transition: color .25s ease-out;
+
+    &:hover{
+        color: $red;
+    }
+}
+
+footer a{
+    color: $white;
+    transition: color .25s ease-out;
+
+    &:hover {
+        color: $dark;
+    }
+}
+
+.current{
+    color: $red;
 }
 
 a{
+    color: $red;
     text-decoration: none;
+    transition: color .25s ease-out;
+    
+    &:hover{
+        color: $dark;
+    }
 }
 
 img{
-    border-radius: 1.5rem;
-}
-
-h1{
-    font-size: 4.5rem;
-}
-
-h2{
-    font-size: 1.5rem;
-    font-weight: bold;
+    width: 300px;
 }
 
 .container{
@@ -53,4 +73,16 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.post{
+    font-size: 4rem;
+}
+
+.metadata{
+    color: $gray;
+}
+
+.controls {
+    cursor: pointer;
 }
