@@ -1,7 +1,10 @@
 $red: #d91a2a;
+$red-hover: #AD1521;
 $gray: #acacac;
-$dark: #232323;
+$gray-hover: #919191;
 $white: #ffffff;
+$white-hover: #E6E6E6;
+$dark: #232323;
 
 body{
     width: 100vw;
@@ -40,21 +43,22 @@ footer a{
     color: $white;
     transition: color .25s ease-out;
 
-    &:hover {
+    &:hover{
         color: $dark;
     }
 }
 
 .current{
+    font-weight: 700;
     color: $red;
 }
 
 a{
     color: $red;
-    text-decoration: none;
     transition: color .25s ease-out;
     
     &:hover{
+        font-weight: 700;
         color: $dark;
     }
 }
@@ -83,6 +87,34 @@ img{
     color: $gray;
 }
 
-.controls {
+.controls{
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5rem 1rem;
+    width: 16rem;
+    height: 4.5rem;
+    background-color: $white;
+    box-shadow: 0px 4px 4px rgba(172, 172, 172, 0.25);
+    border-radius: 4.5rem;
     cursor: pointer;
+
+    .prev, .next{
+        display: flex;
+        justify-content: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: $red;
+        border-radius: 50%;
+        transition: background-color .25s ease-out;
+
+        &:hover{
+            background-color: $red-hover;
+        }
+
+        img{
+            width: 1.5rem;
+        }
+    }
 }

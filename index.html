@@ -7,19 +7,18 @@ title: Home
     <div class="carousel">
         {% for post in site.posts %}
         <div>
-            <div class="flex-row">
-                <span class="metadata">{{ post.date | date: "%B %-d, %Y"}}</span>
-                <div class="controls">
-                    <span class="prev metadata">{</span>
-                    <span class="next metadata">}</span>
-                </div>
-            </div>
+            <span class="metadata">{{ post.date | date: "%B %-d, %Y"}}</span>
             <span class="post">{{ post.content }}</span>
             <div class="flex-row">
                 <span class="metadata">{{ post.song }}</span>
-                <a href="{{ post.link }}">Listen</a>
+                <a href="{{ post.link }}">Listen Now</a>
             </div>
         </div>
         {% endfor %}
+    </div>
+    <div class="controls flex-row">
+        <div class="prev"><img class="logo" src="/assets/images/left-arrow.svg"></div>
+        <span class="metadata"> / {{ site.posts | size }}</span>
+        <div class="next"><img class="logo" src="/assets/images/right-arrow.svg"></div>
     </div>
 </main>
