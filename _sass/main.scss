@@ -32,7 +32,6 @@ footer{
 nav a{
     margin-left: 1rem;
     color: $gray;
-    transition: color .25s ease-out;
 
     &:hover{
         color: $red;
@@ -41,9 +40,9 @@ nav a{
 
 footer a{
     color: $white;
-    transition: color .25s ease-out;
 
     &:hover{
+        font-weight: 700;
         color: $dark;
     }
 }
@@ -55,7 +54,7 @@ footer a{
 
 a{
     color: $red;
-    transition: color .25s ease-out;
+    transition: all .15s ease-out;
     
     &:hover{
         font-weight: 700;
