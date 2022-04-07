@@ -134,8 +134,13 @@ h2{
             background-color: $red-hover;
         }
 
-        img{
+        .arrow{
             width: 1.5rem;
+            transition: width .25s ease-in-out;
+
+            &:hover{
+                width: 2rem;
+            }
         }
     }
 }
