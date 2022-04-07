@@ -3,19 +3,17 @@ layout: default
 title: Home
 ---
 
-<main>
-    <div class="carousel">
-        {% for post in site.posts %}
-        <div class="post">
-            <span class="metadata">{{ post.date | date: "%B %-d, %Y"}}</span>
-            <span class="content">{{ post.content }}</span>
-            <a href="{{ post.link }}" target="_blank">{{ post.song }}</a>
-        </div>
-        {% endfor %}
+<div class="carousel">
+    {% for post in site.posts %}
+    <div class="post">
+        <span class="metadata">{{ post.date | date: "%B %-d, %Y"}}</span>
+        <span class="content">{{ post.content }}</span>
+        <a href="{{ post.link }}" target="_blank">{{ post.song }}</a>
     </div>
-    <div class="controls flex-row">
-        <div class="prev"><img class="logo" src="/assets/images/left-arrow.svg"></div>
-        <div class="metadata">Navigate Posts</div>
-        <div class="next"><img class="logo" src="/assets/images/right-arrow.svg"></div>
-    </div>
-</main>
+    {% endfor %}
+</div>
+<div class="controls flex-row">
+    <div class="prev"><img class="logo" src="/assets/images/left-arrow.svg"></div>
+    <div class="metadata">Navigate Posts</div>
+    <div class="next"><img class="logo" src="/assets/images/right-arrow.svg"></div>
+</div>

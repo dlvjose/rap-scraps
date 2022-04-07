@@ -7,8 +7,7 @@ $white-hover: #E6E6E6;
 $dark: #232323;
 
 body{
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: $white;
     color: $dark;
     font-family: 'Montserrat', sans-serif;
@@ -48,6 +47,10 @@ nav a{
     margin-left: 1rem;
 }
 
+.logo{
+    border: none;
+}
+
 footer a{
     color: $white;
     border-bottom: 2px solid $white;
@@ -56,6 +59,10 @@ footer a{
         color: $dark;
         border-bottom: 2px solid $dark;
     }
+}
+
+main{
+    margin-top: 8rem;
 }
 
 img{
@@ -136,6 +143,10 @@ h2{
 @media only screen and (max-width: 767px) {
     h2{
         font-size: 1.5rem;
+    }
+
+    main {
+        margin-top: 4rem;
     }
 
     .post{

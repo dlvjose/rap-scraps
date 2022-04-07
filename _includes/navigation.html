@@ -1,6 +1,6 @@
 <nav class="container">
     <div class="flex-row">
-        <img class="logo" src="/assets/images/rap-scraps-logo.svg">
+        <a class="logo" href="index"><img class="logo" src="/assets/images/rap-scraps-logo.svg"></a>
         <div>
             {% for item in site.data.navigation %}
             <a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>{{ item.name }}</a>
