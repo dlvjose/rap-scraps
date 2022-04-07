@@ -35,7 +35,7 @@ a{
     text-decoration: none;
     transition: all .25s ease-in-out;
 
-    &:hover {
+    &:hover{
         padding-bottom: .25rem;
         font-weight: 500;
         color: $red;
@@ -48,7 +48,13 @@ nav a{
 }
 
 .logo{
+    padding: 0;
     border: none;
+
+    &:hover{
+        padding: 0;
+        border: none;
+    }
 }
 
 footer a{
