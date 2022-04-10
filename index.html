@@ -7,7 +7,7 @@ title: Home
     {% for post in site.posts %}
     <div class="post">
         <span class="metadata">{{ post.date | date: "%B %-d, %Y"}}</span>
-        <span class="content">{{ post.content }}</span>
+        <div class="content">{{ post.content }}</div>
         <a href="{{ post.link }}" target="_blank">{{ post.song }}</a>
     </div>
     {% endfor %}
