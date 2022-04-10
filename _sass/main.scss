@@ -96,9 +96,11 @@ h2{
     align-items: center;
 }
 
-.post{
-    height: 75vh;
+.carousel{
+    transform: translateY(50%);
+}
 
+.post{
     .content{
         font-size: 3rem;
         font-weight: 700;
