@@ -43,19 +43,25 @@ a{
     }
 }
 
-nav a{
-    margin-left: 1rem;
-}
-
-.logo{
-    margin-left: 0;
-    padding: 0;
-    width: 14rem;
-    border: none;
-
-    &:hover{
+nav{
+    a{
+        margin-left: 1rem;
+    }
+    .logo{
+        margin-left: 0;
         padding: 0;
+        width: 12rem;
         border: none;
+        
+        &:hover{
+            padding: 0;
+            border: none;
+        }
+    }
+    .current{
+        font-weight: 500;
+        color: $red;
+        border-bottom: 2px solid $red;
     }
 }
 
@@ -69,6 +75,17 @@ footer a{
     }
 }
 
+.container{
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 1rem;
+    .flex-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 h1{
     color: $gray;
 }
@@ -78,48 +95,29 @@ h2{
     font-weight: 500;
 }
 
-.current{
-    font-weight: 500;
-    color: $red;
-    border-bottom: 2px solid $red;
-}
-
-.container{
-    max-width: 1248px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.flex-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .carousel{
-    height: 40vh;
-    transform: translateY(20%);
-}
+    padding-bottom: 1rem;
 
-.post{
-    .content{
-        font-size: 3rem;
-        font-weight: 700;
+    .post{
+        padding: .5rem 0;
+
+        .metadata{
+            color: $gray;
+        }
+
+        .content{
+            font-size: 3rem;
+            font-weight: 700;
+        }
     }
 }
 
-.metadata{
-    color: $gray;
-}
-
 .controls{
-    position: fixed;
-    bottom: 5%;
-    left: 50%;
+    margin: 0 auto;
     padding: .5rem 1rem;
-    width: 18.5rem;
-    height: 4.5rem;
-    transform: translate(-50%, -50%);
+    max-width: 18.5rem;
+    max-height: 4.5rem;
+    color: $gray;
     background-color: $white;
     box-shadow: 0px 4px 4px rgba(172, 172, 172, 0.25);
     border-radius: 4.5rem;
@@ -158,18 +156,11 @@ h2{
         width: 8rem;
     }
 
-    .controls{
-        bottom: 6%;
-    }
-
     .carousel{
-        height: auto;
-        transform: translateY(10%);
-    }
-
-    .post{
-        .content{
-            font-size: 1.5rem;
+        .post{
+            .content{
+                font-size: 1.5rem;
+            }
         }
     }
 }
