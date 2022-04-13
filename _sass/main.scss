@@ -79,6 +79,7 @@ footer a{
     max-width: 1248px;
     margin: 0 auto;
     padding: 1rem;
+
     .flex-row{
         display: flex;
         justify-content: space-between;
@@ -106,7 +107,7 @@ h2{
         }
 
         .content{
-            font-size: 3rem;
+            font-size: 3vh;
             font-weight: 700;
         }
     }
@@ -153,14 +154,6 @@ h2{
     }
 
     .logo{
-        width: 8rem;
-    }
-
-    .carousel{
-        .post{
-            .content{
-                font-size: 1.5rem;
-            }
-        }
+        width: 4rem;
     }
 }
