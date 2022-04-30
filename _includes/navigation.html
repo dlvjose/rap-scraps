@@ -3,7 +3,7 @@
         <a class="logo" href="index"><img src="/assets/images/rap-scraps-logo.svg" alt="Logo of a red rectangle with the word Rap Scraps in text."></a>
         <div>
             {% for item in site.data.navigation %}
-            <a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>{{ item.name }}</a>
+            <a href="{{ item.link }}" {% if page.url==item.link %} class="current" {% endif %}>{{ item.name }}</a>
             {% endfor %}
         </div>
     </div>
